@@ -129,7 +129,7 @@
         							<input class="wide text input datepicker" id="tagline" type="text" placeholder="Enter Date" />
     							  </li>   
 							<li class="field">
-        							<input class="wide text input timepicker" id="tagline" type="text" placeholder="Enter Time" />
+        							<input class="wide text input timepicker" id="tagline" type="text" placeholder="Enter Date" />
     							  </li>     
 						</ul>
  
@@ -184,7 +184,6 @@
 
 <script>
 $('.datepicker').pickadate();
-$('.timepicker').pickatime()
 </script>
 	<!--
 	Include gumby.js followed by UI modules.
