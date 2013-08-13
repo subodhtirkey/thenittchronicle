@@ -1,3 +1,4 @@
+
 <!doctype html>
 
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
@@ -42,6 +43,8 @@
 	<link rel="stylesheet" href="pickadate/lib/themes/default.time.css" id="theme_time">
 
 	<script src="js/libs/modernizr-2.6.2.min.js"></script>
+
+
 </head>
 
 <style>
@@ -69,7 +72,7 @@
 		</h1>
 		
 		<ul class="eight columns">
-				<div class="row" style="padding-left:80%;">
+				<div class="row" style="padding-left:60%;">
 					<li>
 						<button class="medium primary btn">
 							<a href="#">Logout</a>
@@ -107,7 +110,7 @@
 						<li class="active"><a href="#">Add News</a></li>
 						<li class=""><a href="#">Edit News</a></li>
 						<li class=""><a href="#">Edit Profile</a></li>
-						
+						<li class=""><a href="#">Admin Dashboard</a></li>
 					</ul>
 					<div class="tab-content nine columns active">
 
@@ -115,24 +118,38 @@
 						<div class="row">
 						<ul>
       							<li class="field">
-        							<input class="wide text input" id="title" type="text" placeholder="Enter Title" />
+								<h4>Title</h4>
+        							<input class="wide text input" id="newstitle" type="text" placeholder="Enter Title" />
      							 </li>
       							<li class="field">
-        							<input class="wide text input" id="tagline" type="text" placeholder="Enter Tagline" />
+								<h4>Tagline</h4>
+        							<input class="wide text input" id="newstagline" type="text" placeholder="Enter Tagline" />
       							</li>
       
      							 <li class="field">
-      								 <textarea class="input textarea" placeholder="Enter Description" rows="3"></textarea>
+								<h4>Description</h4>
+      								 <textarea class="input textarea" id="newsdescription"  placeholder="Enter Description" rows="3"></textarea>
       								</li>
 
 							<li class="field">
-        							<input class="wide text input datepicker" id="tagline" type="text" placeholder="Enter Date" />
+								<h4>Date</h4>
+        							<input class="wide text input datepicker" id="newsdate" type="text" placeholder="Enter Date" />
     							  </li>   
 							<li class="field">
-        							<input class="wide text input timepicker" id="tagline" type="text" placeholder="Enter Time" />
-    							  </li>     
+								<h4>Time</h4>
+        							<input class="wide text input timepicker" id="newstime" type="text" placeholder="Enter Time" />
+    							  </li>
+
+
+						<li class="field">
+								<h4>Enter Image Url</h4>
+        							<input class="wide input text " id="newsimage" type="text" placeholder="Enter image url" />
+				
+    							  </li>
+						<li class="field">
+							<div class="medium primary btn button" id="insert_news_btn" ><a href="#">Done</a></div>
+						</li>
 						</ul>
- 
 					</div>
 
 
@@ -144,8 +161,38 @@
 						</div>
 					</div>
 					<div class="tab-content nine columns">
-						<p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
-						<p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio.</p>
+						<div class="row">
+								<ul>
+							<li class="field">
+								<h4>Name</h4>
+        							<input class="wide text input" id="name" type="text" placeholder="Name" />
+     							 </li>	
+							 <li class="field">
+								<h4>User Name</h4>
+        							<input class="wide text input" id="username" type="text" placeholder="User Name" />
+     							 </li>	
+							 <li class="field">
+								<h4>Email</h4>
+									<input class="wide email input" id="email" type="email" placeholder="Email input" />
+							</li>
+							<li class="field">
+								<h4>Password</h4>
+								      <input class="wide password input"id ="password" type="password" placeholder="Password input" />
+									    </li>
+							<li class="field">
+								<h4>Confirm Password</h4>
+								      <input class="wide password input"id ="confirmpassword" type="password" placeholder="Confirm Password " />
+									    </li>
+							<li class="field">
+								<h4>Choose Profile Pic</h4>
+        							<input class="wide input file " id="file" type="file" placeholder="Choose image">
+    							  </li>
+							<li class="field">
+							<div class="medium primary btn"><a href="#">Done</a></div>
+
+							</li>
+								</ul>					
+						</div>
 					</div>
 				</section>
 			</div>
@@ -175,7 +222,7 @@
 	</script>
 
 
-
+<script src="myjs/myjs.js"></script>
 <script src="pickadate/lib/picker.js"></script>
     <script src="pickadate/lib/picker.date.js"></script>
     <script src="pickadate/lib/picker.time.js"></script>
@@ -184,7 +231,7 @@
 
 <script>
 $('.datepicker').pickadate();
-$('.timepicker').pickatime()
+$('.timepicker').pickatime();
 </script>
 	<!--
 	Include gumby.js followed by UI modules.
